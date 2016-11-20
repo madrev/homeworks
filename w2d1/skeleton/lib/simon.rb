@@ -21,7 +21,6 @@ class Simon
   def take_turn
     system("clear")
     show_sequence
-    sleep(1.5)
     if require_sequence == @seq
       round_success_message
       @sequence_length += 1
@@ -33,7 +32,12 @@ class Simon
 
   def show_sequence
     add_random_color
-    @seq.each {|color| puts color}
+    @seq.each do |color|
+      system("clear")
+      sleep(0.1)
+      puts color
+      sleep(1)
+    end
   end
 
   def require_sequence
@@ -51,6 +55,7 @@ class Simon
 
   def round_success_message
     puts "Nice jorb"
+    sleep(0.5)
   end
 
   def game_over_message
