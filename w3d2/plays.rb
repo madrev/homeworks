@@ -65,7 +65,7 @@ class Play
   def self.find_by_playwright(name)
     plays = PlayDBConnection.instance.execute(<<-SQL, name)
       SELECT
-        id, title, year, playwright_id
+        plays.id, title, year, playwright_id
       FROM
         plays
       JOIN
