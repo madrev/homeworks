@@ -53,6 +53,33 @@
         <li>Bake for about 45 minutes at 350F. Watch the cake near the end of the baking time so the top of the cake does not get too dark.</li>
     </section>
 
+    <section>
+      <h2 id="review form">Write a review!</h2>
+      <form action="/reviews" method="post">
+        <label for="name">Your name</label>
+        <input id="name" type="text" name="name" ><br>
+
+        <input type="radio" name="rating" value="1" checked>1<br>
+        <input type="radio" name="rating" value="2">2<br>
+        <input type="radio" name="rating" value="3">3<br>
+        <input type="radio" name="rating" value="4">4<br>
+        <input type="radio" name="rating" value="5">5<br>
+
+
+        <select id="expertise" name="expertise_level">
+          <option disabled selected>-- Select your expertise level --</option>
+          <option value =1>Sometimes Cook</option>
+          <option value =2>I cook every day</option>
+          <option value =3>Cooking is a hobby</option>
+          <option value =4>Professional chef</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Submit review">
+
+      </form>
+    </section>
+
     <footer>
       <p>All thanks to Momrev and people who write recipes on walls.</p>
     </footer>
